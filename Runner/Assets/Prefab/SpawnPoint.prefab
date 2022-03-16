@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5505059539520718632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5505059539520718638}
+  - component: {fileID: 5505059539520718633}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5505059539520718638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5505059539520718632}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -180, y: 5, z: 0}
+  m_LocalScale: {x: 18, y: 18, z: 4}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5505059539520718633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5505059539520718632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af9c8edb1e8f8d429dbb5e4c46d5162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  engel:
+  - {fileID: 6874528698814792838, guid: 1a11ba24686aa0e49bc4018db09dc02a, type: 3}
+  - {fileID: 8442823618232308000, guid: 7da8b8ac3ee400942a358449f5278551, type: 3}
+  - {fileID: 6934473257679711482, guid: 17c51461931418c49841f2e21febfbb6, type: 3}
+  - {fileID: 1336481860758267447, guid: cf6ab789ceca5d54896fc50c19d78fc9, type: 3}
+  - {fileID: 419337482524793264, guid: 9efe1407e61004245bcd75573d808746, type: 3}
+  - {fileID: 5912899612210429261, guid: 708cf58c0fb7019489d5060c77af8ef4, type: 3}
+  - {fileID: 2874365159842534381, guid: e8d767f630088b345bd95b9f2b70954f, type: 3}
+  - {fileID: 8048301214254553427, guid: aa19e5dc73736544398e28a5b517944f, type: 3}
+  - {fileID: 7641293651057028990, guid: be683e2cc2dd1db4d85d09260f2357ae, type: 3}
+  - {fileID: 7641293651057028990, guid: 4acb49a5ca8f24841a271935dbd7ea7c, type: 3}
+  Throw: {fileID: 3867385054679224549, guid: 8006395e60206bc4cbd3ec52b07636cd, type: 3}
+  spawnTime: 2
+  counterEngel: 0
+  toplamEngel: 3
