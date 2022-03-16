@@ -136,6 +136,9 @@ public class Spawn : MonoBehaviour
             if (finish)
             {
                 run = false;
+                moneyRandom = true;
+                SpawnMoney();
+                yield return new WaitForSeconds(spawnTime);
                 SpawnThrow();
 
 
@@ -150,7 +153,7 @@ public class Spawn : MonoBehaviour
             {
                 SpawnMoney();
               
-                yield return new WaitForSeconds(spawnTime);
+                yield return new WaitForSeconds(spawnTime+1);
                 int random = UnityEngine.Random.Range(0, engel.Length);
                 //float x = UnityEngine.Random.Range(0.0F, 1.0F) < 0.5F ? -170f : -160f;
                 Instantiate(engel[random], transform.position, Quaternion.identity, environment);
@@ -215,14 +218,16 @@ public class Spawn : MonoBehaviour
         }
     }
     int randomMoneyPrefab;
+    public bool moneyRandom;
     void SpawnMoney()
     {
 
         para = true;
         tane = 0;
-        int x = UnityEngine.Random.Range(0, 2) == 0 ? -6 : 6;
+       
         randomMoneyPrefab = UnityEngine.Random.Range(0, money.Length);
-        StartCoroutine(MoneyBasma(x, randomMoneyPrefab));
+        int uzunluk = UnityEngine.Random.Range(4, 7);
+        StartCoroutine(MoneyBasma(randomMoneyPrefab,uzunluk));
 
     }
 
@@ -230,21 +235,48 @@ public class Spawn : MonoBehaviour
 
     bool para = true;
     int tane;
-    IEnumerator MoneyBasma(int x,int random)
+    IEnumerator MoneyBasma(int random,int uzunluk)
     {
-        while (para)
+        if (moneyRandom)
         {
-            yield return new WaitForSeconds(0.25f);
-            
-            Instantiate(money[random], transform.position + new Vector3(x, 2, 0), Quaternion.Euler(0,90,0), environment);
-            tane++;
-           
-            if (tane==5)
+            while (para)
             {
-                
-                para = false;
+                yield return new WaitForSeconds(0.25f);
+                int x = UnityEngine.Random.Range(0, money.Length);
+                Instantiate(money[x], transform.position + new Vector3(-6, 2, 0), Quaternion.Euler(0, 90, 0), environment);
+                int y = UnityEngine.Random.Range(0, money.Length);
+                Instantiate(money[y], transform.position + new Vector3(0, 2, 0), Quaternion.Euler(0, 90, 0), environment);
+                int z = UnityEngine.Random.Range(0, money.Length);
+                Instantiate(money[z], transform.position + new Vector3(6, 2, 0), Quaternion.Euler(0, 90, 0), environment);
+                tane++;
+
+                if (tane == uzunluk)
+                {
+
+                    para = false;
+                    moneyRandom = false;
+                }
             }
         }
+        else
+        {
+            while (para)
+            {
+                yield return new WaitForSeconds(0.25f);
+
+                Instantiate(money[random], transform.position + new Vector3(-6, 2, 0), Quaternion.Euler(0, 90, 0), environment);
+                Instantiate(money[random], transform.position + new Vector3(0, 2, 0), Quaternion.Euler(0, 90, 0), environment);
+                Instantiate(money[random], transform.position + new Vector3(6, 2, 0), Quaternion.Euler(0, 90, 0), environment);
+                tane++;
+
+                if (tane == uzunluk)
+                {
+
+                    para = false;
+                }
+            }
+        }
+       
         
     }
 

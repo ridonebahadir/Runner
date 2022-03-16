@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerMove : MonoBehaviour
     public Transform leftBorder;
     private Touch touch;
     // Update is called once per frame
+    float currLerp = 0;
+    
     void Update()
     {
 
@@ -44,11 +47,17 @@ public class PlayerMove : MonoBehaviour
 
             if (touch.phase == TouchPhase.Moved)
             {
-                transform.position = new Vector3(
-                    transform.position.x + touch.deltaPosition.x * speed,
-                    transform.position.y,
-                    transform.position.z
-                    );
+                transform.DOMoveX(transform.position.x + touch.deltaPosition.x*speed , speed).SetEase(Ease.InOutSine);
+
+                //DOTween.To(DegiskeninDegeriniAl, DegiskeninDegeriniDegistir, speed, speed).SetEase(Ease.InOutQuart);
+
+               
+
+                //transform.position = new Vector3(
+                //    transform.position.x + touch.deltaPosition.x * speed,
+                //    transform.position.y,
+                //    transform.position.z
+                //    );
             }
         }
 
@@ -58,6 +67,8 @@ public class PlayerMove : MonoBehaviour
 
 
     }
+    //public float duration;
+   
     private void FixedUpdate()
     {
         if (touchStart)
