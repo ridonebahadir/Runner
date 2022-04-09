@@ -752,7 +752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BNB
+  m_text: Rouble
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7659f6d6ec9b642db8be29bc45fe97cc, type: 2}
   m_sharedMaterial: {fileID: 8690591861142563998, guid: 7659f6d6ec9b642db8be29bc45fe97cc, type: 2}
@@ -779,8 +779,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 125
+  m_fontSizeBase: 125
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11647,8 +11647,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 125
+  m_fontSizeBase: 125
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -11839,7 +11839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a62a530a893094628b207c655eaec8e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8eb3ad757822df94aa8934bb2b1298b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12496,21 +12496,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c5504e7acb121d499cb90f9749938c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin:
+  - {fileID: 8602678162103450986}
+  - {fileID: 2691341518935627706}
   icons:
+  - {fileID: 21300000, guid: 40a2eab84707c4a9bba8f732119d1d8e, type: 3}
+  - {fileID: 21300000, guid: ddb323b7a9d04475e93f49e68bc8b76b, type: 3}
   - {fileID: 21300000, guid: 895d373c8eba64c60865aa446f363cf7, type: 3}
   - {fileID: 21300000, guid: 54b5771491c8d46b380cbcddb7237081, type: 3}
-  - {fileID: 21300000, guid: ddb323b7a9d04475e93f49e68bc8b76b, type: 3}
-  - {fileID: 21300000, guid: 40a2eab84707c4a9bba8f732119d1d8e, type: 3}
   - {fileID: 21300000, guid: 01792b97e924f4c1da0afbd869711318, type: 3}
   - {fileID: 21300000, guid: 7b49f776ed7964f8a8ba462c666dc846, type: 3}
   - {fileID: 21300000, guid: defc41c534f3747b98e0e07ed45a3493, type: 3}
   - {fileID: 21300000, guid: 3fbf7f5cde10442539784f763819c893, type: 3}
   - {fileID: 21300000, guid: a88be69eab7af4f75940e728714e2b61, type: 3}
-  - {fileID: 21300000, guid: 45f8b132b7c704f7db426dd9e481b0f6, type: 3}
-  - {fileID: 21300000, guid: 78c44f809fb144db8a90752e45080aa7, type: 3}
   - {fileID: 21300000, guid: 04840be790d5e4d69b28f1e655b469a1, type: 3}
   - {fileID: 21300000, guid: 85898e166060b4de7a9a2f50e17f4865, type: 3}
+  - {fileID: 21300000, guid: 78c44f809fb144db8a90752e45080aa7, type: 3}
   - {fileID: 21300000, guid: 17258986c67d04cc09b95c5a684818bc, type: 3}
+  - {fileID: 21300000, guid: 45f8b132b7c704f7db426dd9e481b0f6, type: 3}
+  - {fileID: 21300000, guid: ab92470f54691e64abaefcc598a40bbd, type: 3}
+  - {fileID: 21300000, guid: 2e9b3a558cdeedf4e971c52e8154b45f, type: 3}
+  - {fileID: 21300000, guid: bb1f84c9945c9be4da7e85e805f0e662, type: 3}
+  - {fileID: 21300000, guid: b8abdcc70fffd3048acfbd366c09e754, type: 3}
+  - {fileID: 21300000, guid: 8eb3ad757822df94aa8934bb2b1298b5, type: 3}
+  - {fileID: 21300000, guid: a2b75d9a606db9b47834290477301bd0, type: 3}
+  - {fileID: 21300000, guid: e02f6cb04f112aa4dbdfe20d2be6b358, type: 3}
   rDoorIcon: {fileID: 4003520665978007255}
   lDoorIcon: {fileID: 6422896894849329002}
   coinName:
@@ -12610,7 +12620,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a62a530a893094628b207c655eaec8e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 895d373c8eba64c60865aa446f363cf7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12835,7 +12845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5663393607302460045, guid: df82ba38001c04f37a0af35f7e45ff04, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.1
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5663393607302460045, guid: df82ba38001c04f37a0af35f7e45ff04, type: 3}
       propertyPath: m_AnchoredPosition.y

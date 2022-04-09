@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         if (Player.level%2==0)
         {
           
-            turnSpeed -= 2;
+            turnSpeed -= 3;
         }
        
     }

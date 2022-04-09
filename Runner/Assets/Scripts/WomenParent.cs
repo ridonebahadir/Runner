@@ -12,15 +12,15 @@ public class WomenParent : MonoBehaviour
     {
        
       
-        for (int i = 0; i< gameObject.transform.childCount; i++)
-        {
+        //for (int i = 0; i< gameObject.transform.childCount; i++)
+        //{
            
-            gameObject.transform.GetChild(i).GetComponent<Women>().value = (i * 0.09f)+0.10f;
-            gameObject.transform.GetChild(i).GetComponent<Women>().child = i;
+        //    gameObject.transform.GetChild(i).GetComponent<Women>().value = (i * 0.09f)+0.10f;
+        //    gameObject.transform.GetChild(i).GetComponent<Women>().child = i;
             
 
           
-        }
+        //}
 
 
        

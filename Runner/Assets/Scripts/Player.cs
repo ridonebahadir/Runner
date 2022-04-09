@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UltimateCameraController.Cameras.Controllers;
 using System.Collections.Generic;
-
+//using FIMSpace.FSpine;
 public class Player : MonoBehaviour
 {
 
@@ -74,12 +74,17 @@ public class Player : MonoBehaviour
     //public Transform ethOk;
     //public int eth;
     //public Text ethValueText;
-
-
+    int child;
+  
     [Header("COIN MATERIAL")]
     public Slider costLevelSlider;
     private void Start()
     {
+
+        //fSpine.SpineTransforms[0].gameObject.SetActive(true);
+       
+
+
         startCameraPos = mainCamera.transform.position;
         startCameraRot = mainCamera.transform.eulerAngles;
         costLevelSlider.maxValue = costLevel;
@@ -108,7 +113,7 @@ public class Player : MonoBehaviour
 
         if (counter)
         {
-            CounterScore();
+           CounterScore();
         }
        
     }
@@ -118,7 +123,7 @@ public class Player : MonoBehaviour
 
     int value;
 
-    int child = -2;
+    
     int a;
 
 
@@ -131,9 +136,9 @@ public class Player : MonoBehaviour
         scoreText.text = "$ " + score.ToString();
 
 
-        //if ((score > 0) && (score < 2000)) Upgrade(0);
-        //else if ((score > 2000) && (score < 3000)) Upgrade(1);
-        //else if ((score > 3000) && (score < 4000)) Upgrade(2);
+        //if ((score > 0) && (score < 5)) Upgrade(3);
+        //else if ((score > 20) && (score < 100)) Upgrade(1);
+        //else if ((score > 300) && (score < 400)) Upgrade(2);
 
         value = score / 10;
 
@@ -472,7 +477,7 @@ public class Player : MonoBehaviour
         
         Spawn.finish = false;
         spawn.SpawnEngel();
-        costLevel = 50*(level+1);
+        costLevel = 250*(level+1);
         costLevelSlider.maxValue = costLevel;
         foreach (Transform item in ThrowParent)
         {
@@ -509,29 +514,31 @@ public class Player : MonoBehaviour
         gameObject.SetActive(false);
         Instantiate(bombParticlePlayer, transform.position, Quaternion.identity);
     }
+    
    public void RestartScene()
     {
         gameManager.Restart();
     }
- 
+
+    //public FSpineAnimator fSpine;
 
     //public void Upgrade(int value)
     //{
     //    //cameraController.offset.z = -value;
-        
-    //    foreach (Transform item in women.transform)
+
+    //    foreach (Transform item in fSpine.transform)
     //    {
     //        item.gameObject.SetActive(false);
     //    }
-      
+
     //    for (int i = 1; i < value; i++)
     //    {
-    //        women.transform.GetChild(i).gameObject.SetActive(true); 
+    //        fSpine.SpineTransforms[i].gameObject.SetActive(true);
     //    }
-    //    cameraController.offset.z = -value;
+    //    //cameraController.offset.z = -value;
     //    counter = false;
     //}
-    
+
 
 
 

@@ -30,17 +30,17 @@ public class Coin : MonoBehaviour
 
     public int random;
     int maxRange = 10;
-    int minRange = 0;
+    int minRange = -10;
     
 
     private void Start()
     {
         //material =transform.GetChild(0).GetComponent<Renderer>().material;
-        if (Player.level % 3 == 2)
-        {
-            maxRange += 5;
-            minRange -= 5;
-        }
+        //if (Player.level % 3 == 2)
+        //{
+        //    maxRange += 5;
+        //    minRange -= 5;
+        //}
         CoinBorsa();
         
     }
@@ -48,7 +48,7 @@ public class Coin : MonoBehaviour
     {
        
             
-             random = UnityEngine.Random.Range(minRange, maxRange);
+             //random = UnityEngine.Random.Range(minRange, maxRange);
              if (random == 0)
             {
             //Pervaz.material.color = Color.white;
@@ -78,7 +78,7 @@ public class Coin : MonoBehaviour
             Arrows.transform.GetChild(0).gameObject.SetActive(false);
             Arrows.transform.GetChild(1).gameObject.SetActive(true);
             Arrows.transform.GetChild(2).gameObject.SetActive(false);
-        }
+             }
            
 
             //yield return new WaitForSeconds(1.5f);
